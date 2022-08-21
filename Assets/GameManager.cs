@@ -24,6 +24,9 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        //VERY IMPORTANT : SETS UP INPUT
+        Input.simulateMouseWithTouches = true;
+
         //Get the Player's Position
         initPos = Player.transform.position;
 

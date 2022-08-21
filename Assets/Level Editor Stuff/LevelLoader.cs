@@ -13,6 +13,9 @@ public class LevelLoader : MonoBehaviour
     //Edit System
     public EditSystem editSystem;
 
+    //Hint Manager
+    public HintManager hintManager;
+
     //All of da objects
     public GameObject blocker, bouncer, megaBouncer, leftBooster, rightBooster;
 
@@ -70,6 +73,9 @@ public class LevelLoader : MonoBehaviour
             ed.ID = item.id;
             editSystem.AllEditables = editSystem.AllEditables.Concat(new EditableObject[] { ed }).ToArray();
         }
+
+        //Set Keys
+        hintManager.HintKeys = stage.keys;
     }
 
     public Stage Convert()

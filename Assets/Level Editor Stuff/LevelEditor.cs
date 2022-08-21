@@ -68,7 +68,7 @@ public class LevelEditor : MonoBehaviour
             if (transformComponent.name == "Winner Platform")
             {
                 //Extract Position
-                Vector3 position = transform.position;
+                Vector3 position = transformComponent.position;
                 winPlatformPos = position;
                 victoryPlatformPos = winPlatformPos;
             }
